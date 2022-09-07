@@ -1,0 +1,158 @@
+
+
+
+:root {
+	--background-color: #000;
+	--foreground-color1: #cccccc;
+	--foreground-color2: #80ff00;
+	--foreground-color3: #fff;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: var(--background-color);
+}
+
+.main-screen {
+	display: flex;
+}
+
+/* PAGE WIDE STYLES */
+
+h1 {
+	font-family: "Trebuchet MS";
+	font-size: 3rem;
+	color: var(--foreground-color2);
+}
+
+a, p, li, code {
+	font-family: Verdana;
+	font-size: 1.4rem;
+	color: var(--foreground-color1);
+}
+
+a:hover,
+a:focus {
+	text-decoration: underline;
+	color: var(--foreground-color2);
+	border: none;
+	outline: none;
+}
+
+/* NAVIGATION STYLES */
+
+.menu {
+	position: fixed;
+	left: 0;
+	width: 23%;
+	height: 100vh;
+	border-right: 1px solid;
+}
+
+.menu header {
+	position: fixed;
+	top: 0;
+	height: 6rem;
+	width: 23%;	
+	background-color: var(--background-color);
+	border-bottom: 2px solid var(--foreground-color1);
+}
+
+.main-header {
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+.nav-options {
+	margin-top: 6rem;
+	height: 90vh;
+	overflow: auto;
+}
+
+.nav-card {
+	width: 100%;
+	padding: 1.5rem 5% 1.5rem 10%;
+}
+
+.nav-card a {
+	font-size: 1.6rem;
+	text-decoration: none;
+}
+
+/* MAIN DOC STYLES */
+
+#main-doc {
+	margin-left: 25%;
+	padding: 1% 4% 3% 0;
+}
+
+#main-doc h1 {
+	color: var(--foreground-color3);
+	font-size: 2.8rem;
+}
+
+.doc-text {
+	padding: 0 2%;
+}
+
+.doc-text p {
+	line-height: 2rem;
+}
+
+.doc-text li {
+	margin: 2rem 0;
+}
+
+.doc-text code {
+	display: block;
+	font-size: 1.2rem;
+	margin: 1rem 0;
+	color: var(--foreground-color3);
+}
+
+.code-block {
+	padding: 1rem 3%;
+	margin: 3% 3%;
+	border: 2px solid var(--foreground-color2);	
+	border-radius: 5px;
+}
+
+@media (max-width: 1110px) {
+	
+	.menu header {
+		width: 100%;
+	}
+	
+	#main-doc {
+		margin-top: 6rem;
+	}
+}
+
+@media (max-width: 500px) {
+	
+	.nav-options {
+		display: none;
+		visibility: hidden;
+		margin-left: 5%;
+	}
+	
+	#main-doc {
+		margin-left: 5%;
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
