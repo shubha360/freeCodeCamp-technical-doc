@@ -1,5 +1,8 @@
+
+
+
 :root {
-	--background-color: rgb(20, 20, 20);
+	--background-color: #141414;
 	--foreground-color1: #cccccc;
 	--foreground-color2: #80ff00;
 	--foreground-color3: #fff;
@@ -52,6 +55,7 @@ a:focus {
 	left: 0;
 	width: 23%;
 	height: 100vh;
+	background-color: var(--background-color);
 }
 
 #navbar header {
@@ -63,7 +67,18 @@ a:focus {
 	border-bottom: 2px solid var(--foreground-color1);
 }
 #navbar .nav-button {
-	color: #80ff00;
+	position: absolute;
+	top: 0px;
+	z-index: 2;
+	top: 18px;
+	left: 20px;
+	font-size: 2rem;
+	color: var(--foreground-color2);
+	background-color: var(--background-color);
+	border: none;
+	cursor: pointer;
+	display: none;
+	visibility: hidden;
 }
 
 .main-header {
@@ -99,6 +114,10 @@ a:focus {
 #main-doc h1 {
 	color: var(--foreground-color3);
 	font-size: 2.8rem;
+}
+
+section {
+	scroll-margin-top: 60px;
 }
 
 .doc-text {
@@ -142,16 +161,32 @@ a:focus {
 	}
 }
 
-@media (max-width: 500px) {
+@media (max-width: 500px) and (orientation: portrait) {
+	
+	#navbar {
+		width: 0%;
+	}
 	
 	.nav-options {
 		display: none;
 		visibility: hidden;
-		margin-left: 5%;
+	}
+	
+	#navbar .nav-button {
+		display: inline-block;
+		visibility: visible;
 	}
 	
 	#main-doc {
 		margin-left: 5%;
+	}
+}
+
+@media (max-width: 350px) {
+	
+	#navbar .main-header {
+		font-size: 2.5rem;
+		margin-left: 50px;
 	}
 }
 
