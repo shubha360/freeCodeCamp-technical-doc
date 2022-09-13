@@ -62,6 +62,9 @@ a:focus {
 	background-color: var(--background-color);
 	border-bottom: 2px solid var(--foreground-color1);
 }
+#navbar .nav-button {
+	color: #80ff00;
+}
 
 .main-header {
 	text-align: center;
