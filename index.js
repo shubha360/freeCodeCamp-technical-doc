@@ -1,11 +1,7 @@
-
-
-
 const navButton = document.querySelector("#navbar .nav-button");
 
-const navBar = document.querySelector("#navbar");
-const navOptions = document.querySelector(".nav-options");
-const navLink = document.querySelectorAll(".nav-options a");
+const menu = document.querySelector(".mobile-menu");
+const link = document.querySelectorAll(".mobile-menu .nav-link");
 
 var isNavOpen = false;
 
@@ -21,23 +17,19 @@ navButton.addEventListener('click', () => {
 	}
 });
 
+link.forEach((btn) => {
+	btn.addEventListener('click', hideNav)
+});
 
 function showNav() {
-	
-	navLink.forEach((btn) => {
-		btn.addEventListener('click', hideNav)
-	});
-	
+
 	// change button color
 	navButton.style.color = colorBlack;
 	navButton.style.backgroundColor = colorGreen;
 	
-	// make nav bar width 100%
-	navBar.style.width = "100%";
-	
-	// make nav options visible
-	navOptions.style.display = "revert";
-	navOptions.style.visibility = "revert";
+	// make menu visible
+	menu.style.display = "block";
+	menu.style.visibility = "visible";
 	
 	isNavOpen = true;
 }
@@ -48,12 +40,9 @@ function hideNav() {
 	navButton.style.color = colorGreen;
 	navButton.style.backgroundColor = colorBlack;
 	
-	// make nav bar width 0%
-	navBar.style.width = "0%";
-	
-	// make nav options hidden
-	navOptions.style.display = "none";
-	navOptions.style.visibility = "hidden";
+	// make menu hidden
+	menu.style.display = "none";
+	menu.style.visibility = "hidden";
 	
 	isNavOpen = false;
 }

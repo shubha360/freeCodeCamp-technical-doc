@@ -1,6 +1,3 @@
-
-
-
 :root {
 	--background-color: #141414;
 	--foreground-color1: #cccccc;
@@ -50,14 +47,6 @@ a:focus {
 
 /* NAVIGATION STYLES */
 
-#navbar {
-	position: fixed;
-	left: 0;
-	width: 23%;
-	height: 100vh;
-	background-color: var(--background-color);
-}
-
 #navbar header {
 	position: fixed;
 	top: 0;
@@ -76,6 +65,7 @@ a:focus {
 	color: var(--foreground-color2);
 	background-color: var(--background-color);
 	border: none;
+	border-radius: 2px;
 	cursor: pointer;
 	display: none;
 	visibility: hidden;
@@ -88,6 +78,11 @@ a:focus {
 }
 
 .nav-options {
+	position: fixed;
+	left: 0;
+	width: 23%;
+	height: 100vh;
+	background-color: var(--background-color);
 	margin-top: 6rem;
 	height: 90vh;
 	overflow: auto;
@@ -146,6 +141,18 @@ section {
 	border-radius: 5px;
 }
 
+.mobile-menu {
+	background-color: var(--background-color);
+	position: fixed;
+	top: 60px;	
+	left: 0;
+	width: 100%;
+	height: calc(100vh - 60px);
+	display: none;
+	visibility: hidden;
+	overflow: auto;
+}
+
 @media (max-width: 1110px) {
 	
 	#navbar header {
@@ -161,11 +168,7 @@ section {
 	}
 }
 
-@media (max-width: 500px) and (orientation: portrait) {
-	
-	#navbar {
-		width: 0%;
-	}
+@media (max-width: 500px) {
 	
 	.nav-options {
 		display: none;
