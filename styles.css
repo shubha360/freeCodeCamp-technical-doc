@@ -1,5 +1,5 @@
 :root {
-	--background-color: rgb(20, 20, 20);
+	--background-color: #141414;
 	--foreground-color1: #cccccc;
 	--foreground-color2: #80ff00;
 	--foreground-color3: #fff;
@@ -47,13 +47,6 @@ a:focus {
 
 /* NAVIGATION STYLES */
 
-#navbar {
-	position: fixed;
-	left: 0;
-	width: 23%;
-	height: 100vh;
-}
-
 #navbar header {
 	position: fixed;
 	top: 0;
@@ -61,6 +54,21 @@ a:focus {
 	width: 23%;	
 	background-color: var(--background-color);
 	border-bottom: 2px solid var(--foreground-color1);
+}
+#navbar .nav-button {
+	position: absolute;
+	top: 0px;
+	z-index: 2;
+	top: 18px;
+	left: 20px;
+	font-size: 2rem;
+	color: var(--foreground-color2);
+	background-color: var(--background-color);
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+	display: none;
+	visibility: hidden;
 }
 
 .main-header {
@@ -70,6 +78,11 @@ a:focus {
 }
 
 .nav-options {
+	position: fixed;
+	left: 0;
+	width: 23%;
+	height: 100vh;
+	background-color: var(--background-color);
 	margin-top: 6rem;
 	height: 90vh;
 	overflow: auto;
@@ -98,6 +111,10 @@ a:focus {
 	font-size: 2.8rem;
 }
 
+section {
+	scroll-margin-top: 60px;
+}
+
 .doc-text {
 	padding: 0 2%;
 }
@@ -124,6 +141,18 @@ a:focus {
 	border-radius: 5px;
 }
 
+.mobile-menu {
+	background-color: var(--background-color);
+	position: fixed;
+	top: 60px;	
+	left: 0;
+	width: 100%;
+	height: calc(100vh - 60px);
+	display: none;
+	visibility: hidden;
+	overflow: auto;
+}
+
 @media (max-width: 1110px) {
 	
 	#navbar header {
@@ -144,11 +173,23 @@ a:focus {
 	.nav-options {
 		display: none;
 		visibility: hidden;
-		margin-left: 5%;
+	}
+	
+	#navbar .nav-button {
+		display: inline-block;
+		visibility: visible;
 	}
 	
 	#main-doc {
 		margin-left: 5%;
+	}
+}
+
+@media (max-width: 350px) {
+	
+	#navbar .main-header {
+		font-size: 2.5rem;
+		margin-left: 50px;
 	}
 }
 
